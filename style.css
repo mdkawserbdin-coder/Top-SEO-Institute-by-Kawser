@@ -502,19 +502,47 @@ a{
   gap:18px;
 }
 
+/* ================= REVIEW CARD ================= */
+
 .review-card{
   border:1px solid var(--line);
   background:#0d1218;
   border-radius:14px;
   padding:27px;
-  transition:.25s;
 }
 
-.review-card:hover{
-  transform:translateY(-5px);
-  border-color:#43502e;
+.review-image{
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  overflow:hidden;
+  margin-bottom:15px;
+  flex-shrink:0;
 }
 
+.review-image img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center;
+  border-radius:50%;
+}
+
+.review-card p{
+  color:#c4cad2;
+  font-size:14px;
+  min-height:92px;
+}
+
+.review-card strong{
+  display:block;
+  margin-top:18px;
+}
+
+.review-card small{
+  color:var(--muted);
+}
 
 /* ================= REVIEW CLIENT IMAGE ================= */
 
