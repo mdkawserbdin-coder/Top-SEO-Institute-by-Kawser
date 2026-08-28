@@ -492,14 +492,24 @@ a{
 .project-info a:hover{
   color:var(--accent);
 }
-/* ================= REVIEWS GRID ================= */
 
-.reviews-grid {
+
+/* ================= REVIEWS 3 x 2 GRID ================= */
+
+.review-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     width: 100%;
 }
+
+
+/* ================= REVIEW CARD ================= */
+
+.review-card {
+    width: 100%;
+}
+
 
 /* ================= REVIEW CLIENT IMAGE ================= */
 
@@ -519,21 +529,27 @@ a{
     border: 2px solid #b8ff00;
 }
 
+
 /* Client Name */
+
 .review-client strong {
     display: block;
     font-size: 16px;
     margin-bottom: 4px;
 }
 
+
 /* Client Service */
+
 .review-client small {
     display: block;
     font-size: 12px;
     opacity: 0.7;
 }
 
+
 /* Stars */
+
 .stars {
     color: #ffd700;
     font-size: 16px;
@@ -544,16 +560,19 @@ a{
 /* ================= TABLET ================= */
 
 @media (max-width: 900px) {
-    .reviews-grid {
+
+    .review-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
 }
 
 
 /* ================= MOBILE ================= */
 
 @media (max-width: 600px) {
-    .reviews-grid {
+
+    .review-grid {
         grid-template-columns: 1fr;
         gap: 18px;
     }
@@ -563,107 +582,6 @@ a{
         height: 45px;
         min-width: 45px;
     }
-}
-/* ================= REVIEW CLIENT IMAGE ================= */
-
-.review-client {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.review-client img {
-    width: 60px;
-    height: 60px;
-    min-width: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    border: 2px solid #b8ff00;
-}
-
-/* Client Name */
-.review-client strong {
-    display: block;
-    font-size: 16px;
-    margin-bottom: 4px;
-}
-
-/* Client Service */
-.review-client small {
-    display: block;
-    font-size: 12px;
-    opacity: 0.7;
-}
-
-/* Stars */
-.stars {
-    color: #ffd700;
-    font-size: 16px;
-    margin: 12px 0;
-}
-
-/* REVIEW TEXT */
-.review-card p{
-  color:#c4cad2;
-  font-size:10px;
-  min-height:50px;
-  line-height:1.6;
-}
-
-/* CLIENT NAME */
-.review-card strong{
-  display:block;
-  margin-top:18px;
-  font-size:15px;
-}
-
-/* SERVICE */
-.review-card small{
-  color:var(--muted);
-  font-size:12px;
-}
-
-
-/* ================= MOBILE REVIEWS ================= */
-
-@media(max-width:500px){
-
-  .review-grid{
-    grid-template-columns:1fr;
-  }
-
-}
-
-  .review-card{
-    padding:23px;
-  }
-
-  .review-image{
-    width:58px;
-    height:58px;
-  }
-
-}
-
-@media(max-width:480px){
-
-  .review-card{
-    padding:20px;
-  }
-
-  .review-image{
-    width:52px;
-    height:52px;
-  }
-
-  .review-card p{
-    font-size:13px;
-  }
-
-}
-
-
 
 .review-card p{
   color:#c4cad2;
