@@ -502,55 +502,49 @@ a{
   padding:27px;
 }
 
-/* ================= CLIENT ================= */
-
-.review-client{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
-.review-client img{
+/* CLIENT PROFILE IMAGE */
+.review-image{
   width:50px;
   height:50px;
-  min-width:50px;
+  margin-bottom:15px;
+  flex-shrink:0;
+}
+
+.review-image img{
+  width:50px;
+  height:50px;
   border-radius:50%;
   object-fit:cover;
   object-position:center;
   display:block;
-  border:2px solid var(--accent);
 }
 
-.review-client strong{
-  display:block;
-  margin:0;
-  font-size:15px;
-}
-
-.review-client small{
-  display:block;
-  color:var(--muted);
-  font-size:12px;
-  margin-top:3px;
-}
-
-
-/* ================= STARS ================= */
-
+/* STARS */
 .stars{
   color:#ffd34d;
   letter-spacing:2px;
-  margin:12px 0 15px;
+  margin-bottom:15px;
 }
 
-
-/* ================= REVIEW TEXT ================= */
-
+/* REVIEW TEXT */
 .review-card p{
   color:#c4cad2;
   font-size:14px;
   min-height:92px;
   line-height:1.6;
+}
+
+/* CLIENT NAME */
+.review-card strong{
+  display:block;
+  margin-top:18px;
+  font-size:15px;
+}
+
+/* SERVICE */
+.review-card small{
+  color:var(--muted);
+  font-size:12px;
 }
 
 
