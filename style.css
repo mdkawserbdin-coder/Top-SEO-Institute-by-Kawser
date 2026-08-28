@@ -493,14 +493,6 @@ a{
   color:var(--accent);
 }
 
-
-/* ================= REVIEWS ================= */
-
-.review-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-
 /* ================= REVIEWS ================= */
 
 .review-grid{
@@ -571,49 +563,6 @@ a{
   }
 
 }
-
-
-/* ================= REVIEW STARS ================= */
-
-.stars{
-  color:#ffd34d;
-  font-size:15px;
-  letter-spacing:2px;
-  margin-bottom:15px;
-}
-
-
-/* ================= REVIEW TEXT ================= */
-
-.review-card p{
-  color:#c4cad2;
-  font-size:14px;
-  line-height:1.7;
-  min-height:92px;
-}
-
-.review-card strong{
-  display:block;
-  margin-top:18px;
-  font-size:15px;
-  color:#fff;
-}
-
-.review-card small{
-  display:block;
-  color:var(--muted);
-  font-size:12px;
-  margin-top:3px;
-}
-
-
-/* ================= MOBILE REVIEWS ================= */
-
-@media(max-width:800px){
-
-  .review-grid{
-    grid-template-columns:1fr;
-  }
 
   .review-card{
     padding:23px;
