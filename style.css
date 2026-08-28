@@ -486,8 +486,6 @@ a{
 .project-info a:hover{
   color:var(--accent);
 }
-
-
 /* ================= REVIEWS 3 x 2 GRID ================= */
 
 .review-grid{
@@ -497,30 +495,19 @@ a{
   width:100%;
 }
 
-
-/* ================= REVIEW CARD ================= */
-
 .review-card{
   width:100%;
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:24px;
+  background:#0d1218;
+  transition:.25s;
 }
 
-.review-card p{
-  color:#c4cad2;
-  font-size:14px;
-  min-height:92px;
+.review-card:hover{
+  transform:translateY(-4px);
+  border-color:#43502e;
 }
-
-.review-card strong{
-  display:block;
-  margin-top:18px;
-}
-
-.review-card small{
-  color:var(--muted);
-}
-
-
-/* ================= REVIEW CLIENT IMAGE ================= */
 
 .review-client{
   display:flex;
@@ -542,22 +529,23 @@ a{
   display:block;
   font-size:16px;
   margin-bottom:4px;
-  margin-top:0;
 }
 
 .review-client small{
   display:block;
+  color:var(--muted);
   font-size:12px;
-  opacity:.7;
 }
 
-
-/* ================= STARS ================= */
-
 .stars{
-  color:#ffd700;
   font-size:16px;
   margin:12px 0;
+}
+
+.review-card p{
+  color:#c4cad2;
+  font-size:14px;
+  min-height:92px;
 }
 
 
@@ -649,7 +637,7 @@ a{
 }
 
 
-/* ================= SOCIAL ================= */
+/* ================= SOCIAL MEDIA ================= */
 
 .social-grid{
   display:grid;
@@ -809,15 +797,8 @@ footer{
   }
 
   .service-grid,
-  .portfolio-grid{
-    grid-template-columns:1fr;
-  }
-
-  .review-grid{
-    grid-template-columns:1fr;
-    gap:18px;
-  }
-
+  .portfolio-grid,
+  .review-grid,
   .social-grid{
     grid-template-columns:1fr;
   }
@@ -845,66 +826,44 @@ footer{
     display:none;
   }
 
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media(max-width:600px){
+
+  .review-grid{
+    grid-template-columns:1fr;
+    gap:18px;
+  }
+
+  .review-card{
+    padding:20px;
+  }
+
   .review-client img{
     width:45px;
     height:45px;
     min-width:45px;
   }
 
-}
-
-
-/* ================= SMALL MOBILE ================= */
-
-@media(max-width:500px){
-
-  .section{
-    padding:80px 0;
-  }
-
-  .hero{
+  .review-card p{
+    font-size:14px;
     min-height:auto;
-    padding:110px 0 70px;
-  }
-
-  .hero-card{
-    height:420px;
-  }
-
-  .photo-wrap{
-    width:185px;
-    height:225px;
-  }
-
-  .floating-card{
-    padding:10px 12px;
-    font-size:11px;
-  }
-
-  .floating-card.one{
-    left:0;
-  }
-
-  .floating-card.two{
-    right:0;
   }
 
   .contact-box{
     padding:28px 22px;
   }
 
-  .contact-actions{
-    width:100%;
+  .social-grid{
+    grid-template-columns:1fr;
   }
 
-  .contact-btn{
-    width:100%;
-    text-align:center;
-  }
+}
 
-  .footer-inner{
-    flex-direction:column;
-  }
+
 
   .socials{
     flex-wrap:wrap;
