@@ -607,7 +607,7 @@ a{
 
 /* ================= MOBILE ================= */
 
-@media(max-width:800px){
+@media(max-width:500px){
 
   .review-grid{
     grid-template-columns:1fr;
