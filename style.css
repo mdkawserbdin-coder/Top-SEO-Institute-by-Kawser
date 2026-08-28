@@ -519,14 +519,14 @@ a{
 /* ================= REVIEW CLIENT PROFILE IMAGE ================= */
 
 .review-card .review-image {
-  width: 50px !important;
-  height: 50px !important;
-  min-width: 50px !important;
-  max-width: 50px !important;
-  min-height: 50px !important;
-  max-height: 50px !important;
+  width: 10px !important;
+  height: 10px !important;
+  min-width: 10px !important;
+  max-width: 10px !important;
+  min-height: 10px !important;
+  max-height: 0px !important;
 
-  border-radius: 50% !important;
+  border-radius: 10% !important;
   overflow: hidden !important;
   margin: 0 0 15px 0 !important;
   padding: 0 !important;
