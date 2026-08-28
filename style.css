@@ -508,34 +508,61 @@ a{
   padding:27px;
 }
 
-/* CLIENT PROFILE IMAGE */
-.review-image{
-  width:30px;
-  height:30px;
-  margin-bottom:10px;
-  flex-shrink:0;
-}
-.review-image {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto 15px;
-    border: 2px solid #b8ff00;
+/* ================= REVIEW IMAGE FIX ================= */
+
+.review-card .review-image {
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px !important;
+    min-height: 50px !important;
+    max-width: 50px !important;
+    max-height: 50px !important;
+
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    display: block !important;
+    margin: 0 0 12px 0 !important;
+    padding: 0 !important;
 }
 
-.review-card {
-    text-align: center;
+.review-card .review-image img {
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px !important;
+    min-height: 50px !important;
+    max-width: 50px !important;
+    max-height: 50px !important;
 
+    display: block !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    object-position: center !important;
 }
 
-/* STARS */
-.stars{
-  color:#ffd34d;
-     font-size: 18px;
-    margin: 8px 0 12px;
+.review-card > img {
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px !important;
+    min-height: 50px !important;
+    max-width: 50px !important;
+    max-height: 50px !important;
+
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    display: block !important;
+    margin: 0 0 12px 0 !important;
 }
+
+/* Stars */
+.review-card .stars {
+    color: #ffd34d !important;
+    font-size: 16px !important;
+    letter-spacing: 2px !important;
+    margin-bottom: 12px !important;
+}
+
+
 
 /* REVIEW TEXT */
 .review-card p{
