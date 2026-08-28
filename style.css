@@ -493,7 +493,6 @@ a{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:18px;
-  width:100%;
 }
 
 .review-card{
@@ -501,60 +500,33 @@ a{
   background:#0d1218;
   border-radius:14px;
   padding:27px;
-  width:100%;
-  transition:.25s;
 }
 
-.review-card:hover{
-  border-color:#43502e;
-  transform:translateY(-3px);
-}
-
-
-/* ================= CLIENT PROFILE ================= */
-
-.review-client{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
-.review-client img{
+/* CLIENT PROFILE IMAGE */
+.review-image{
   width:50px;
   height:50px;
-  min-width:50px;
+  margin-bottom:15px;
+  flex-shrink:0;
+}
+
+.review-image img{
+  width:50px;
+  height:50px;
   border-radius:50%;
   object-fit:cover;
   object-position:center;
   display:block;
-  border:2px solid var(--accent);
 }
 
-.review-client strong{
-  display:block;
-  margin:0 0 3px;
-  font-size:15px;
-}
-
-.review-client small{
-  display:block;
-  color:var(--muted);
-  font-size:12px;
-}
-
-
-/* ================= STARS ================= */
-
+/* STARS */
 .stars{
   color:#ffd34d;
   letter-spacing:2px;
-  margin:14px 0;
-  font-size:15px;
+  margin-bottom:15px;
 }
 
-
-/* ================= REVIEW TEXT ================= */
-
+/* REVIEW TEXT */
 .review-card p{
   color:#c4cad2;
   font-size:14px;
@@ -562,35 +534,17 @@ a{
   line-height:1.6;
 }
 
-
-/* ================= REVIEW CATEGORY ================= */
-
-.review-category{
-  margin-top:65px;
+/* CLIENT NAME */
+.review-card strong{
+  display:block;
+  margin-top:18px;
+  font-size:15px;
 }
 
-.review-category-title{
-  display:flex;
-  align-items:center;
-  gap:18px;
-  margin-bottom:25px;
-}
-
-.review-category-title > span{
-  color:var(--accent);
-  font-size:14px;
-  font-weight:800;
-  border:1px solid var(--line);
-  padding:10px 12px;
-  border-radius:8px;
-}
-
-.review-category-title .eyebrow{
-  margin-bottom:5px;
-}
-
-.review-category-title h3{
-  font-size:24px;
+/* SERVICE */
+.review-card small{
+  color:var(--muted);
+  font-size:12px;
 }
 
 
@@ -604,9 +558,10 @@ a{
 
 }
 
-/* ================= MOBILE ================= */
 
-@media(max-width:500px){
+/* ================= MOBILE REVIEWS ================= */
+
+@media(max-width:600px){
 
   .review-grid{
     grid-template-columns:1fr;
@@ -614,22 +569,327 @@ a{
   }
 
   .review-card{
-    padding:20px;
-  }
-
-  .review-client img{
-    width:45px;
-    height:45px;
-    min-width:45px;
+    padding:22px;
   }
 
   .review-card p{
     min-height:auto;
   }
 
-  .review-category{
-    margin-top:50px;
+  .review-image{
+    width:45px;
+    height:45px;
   }
+
+  .review-image img{
+    width:45px;
+    height:45px;
+  }
+
+}
+
+
+/* ================= RESULTS ================= */
+
+.results{
+  padding:95px 0;
+  background:#10151b;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+.results-grid{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:100px;
+}
+
+.result-items{
+  display:grid;
+  gap:24px;
+}
+
+.result{
+  display:grid;
+  grid-template-columns:55px 1fr;
+  border-bottom:1px solid var(--line);
+  padding-bottom:20px;
+}
+
+.result strong{
+  color:var(--accent);
+}
+
+.result p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+.result b{
+  color:white;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact-box{
+  border:1px solid #293226;
+  background:linear-gradient(
+    120deg,
+    #11180e,
+    #10151a
+  );
+  border-radius:20px;
+  padding:55px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
+}
+
+.contact-box>div:first-child{
+  max-width:650px;
+}
+
+.contact-box p:last-child{
+  color:var(--muted);
+  margin-top:12px;
+}
+
+.contact-actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.contact-btn{
+  padding:13px 18px;
+  border:1px solid var(--line);
+  border-radius:9px;
+  background:#0d1117;
+  font-weight:700;
+  transition:.2s;
+}
+
+.contact-btn:hover{
+  border-color:var(--accent);
+  color:var(--accent);
+}
+
+
+/* ================= SOCIAL ================= */
+
+.social-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  margin-top:20px;
+}
+
+.social-grid>a,
+.location-card{
+  padding:20px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:#0e1319;
+  transition:.2s;
+}
+
+.social-grid>a:hover{
+  transform:translateY(-3px);
+  border-color:#43502e;
+}
+
+.social-grid b{
+  display:block;
+}
+
+.social-grid span{
+  display:block;
+  color:var(--muted);
+  font-size:12px;
+  margin-top:5px;
+}
+
+.location-card{
+  color:#fff;
+}
+
+.location-card span{
+  color:var(--muted);
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+  border-top:1px solid var(--line);
+  padding:40px 0 20px;
+}
+
+.footer-inner{
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+}
+
+.footer-inner p{
+  color:var(--muted);
+  font-size:12px;
+}
+
+.socials{
+  display:flex;
+  gap:20px;
+  color:#b9c1cb;
+  font-size:13px;
+}
+
+.socials a:hover{
+  color:var(--accent);
+}
+
+.copyright{
+  text-align:center;
+  color:#5f6874;
+  font-size:11px;
+  margin-top:35px;
+}
+
+
+/* ================= ANIMATION ================= */
+
+.reveal{
+  opacity:0;
+  transform:translateY(20px);
+  transition:
+    opacity .7s ease,
+    transform .7s ease;
+}
+
+.reveal.show{
+  opacity:1;
+  transform:none;
+}
+
+
+/* ================= MAIN MOBILE ================= */
+
+@media(max-width:800px){
+
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:76px;
+    left:0;
+    width:100%;
+    background:#090c11;
+    padding:20px;
+    flex-direction:column;
+    border-bottom:1px solid var(--line);
+  }
+
+  .nav-links.open{
+    display:flex;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .hero{
+    padding-top:115px;
+  }
+
+  .hero-grid,
+  .two-col,
+  .results-grid{
+    grid-template-columns:1fr;
+    gap:50px;
+  }
+
+  .hero-card{
+    height:440px;
+  }
+
+  .photo-wrap{
+    width:205px;
+    height:250px;
+  }
+
+  .floating-card.one{
+    left:5px;
+  }
+
+  .floating-card.two{
+    right:5px;
+  }
+
+  .service-grid,
+  .portfolio-grid,
+  .social-grid{
+    grid-template-columns:1fr;
+  }
+
+  .center-heading h2{
+    font-size:40px;
+  }
+
+  .contact-box{
+    padding:35px;
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .mini-stats{
+    gap:20px;
+    flex-wrap:wrap;
+  }
+
+  .hero h1{
+    letter-spacing:-2px;
+  }
+
+  .brand span{
+    display:none;
+  }
+
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media(max-width:600px){
+
+  .section{
+    padding:80px 0;
+  }
+
+  .hero{
+    min-height:auto;
+  }
+
+  .hero h1{
+    font-size:44px;
+  }
+
+  .hero-text{
+    font-size:15px;
+  }
+
+  .contact-box{
+    padding:25px;
+  }
+
+  .footer-inner{
+    flex-direction:column;
+  }
+
+  .socials{
+    flex-wrap:wrap;
+  }
+
+}
 
   .review-category-title h3{
     font-size:20px;
