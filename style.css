@@ -515,30 +515,26 @@ a{
   margin-bottom:10px;
   flex-shrink:0;
 }
+.review-image {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 15px;
+    border: 2px solid #b8ff00;
+}
 
-/* ================= REVIEW CLIENT PROFILE IMAGE ================= */
+.review-card {
+    text-align: center;
 
-.review-card .review-image {
-  width: 10px !important;
-  height: 10px !important;
-  min-width: 10px !important;
-  max-width: 10px !important;
-  min-height: 10px !important;
-  max-height: 0px !important;
-
-  border-radius: 10% !important;
-  overflow: hidden !important;
-  margin: 0 0 15px 0 !important;
-  padding: 0 !important;
-
-  display: block !important;
 }
 
 /* STARS */
 .stars{
   color:#ffd34d;
-  letter-spacing:2px;
-  margin-bottom:10px;
+     font-size: 18px;
+    margin: 8px 0 12px;
 }
 
 /* REVIEW TEXT */
