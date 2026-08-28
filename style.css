@@ -502,31 +502,50 @@ a{
   padding:27px;
 }
 
-/* CLIENT PROFILE IMAGE */
-.review-image{
-  width:50px;
-  height:50px;
-  margin-bottom:15px;
-  flex-shrink:0;
+/* ================= CLIENT ================= */
+
+.review-client{
+  display:flex;
+  align-items:center;
+  gap:10px;
 }
 
-.review-image img{
+.review-client img{
   width:50px;
   height:50px;
+  min-width:50px;
   border-radius:50%;
   object-fit:cover;
   object-position:center;
   display:block;
+  border:2px solid var(--accent);
 }
 
-/* STARS */
+.review-client strong{
+  display:block;
+  margin:0;
+  font-size:15px;
+}
+
+.review-client small{
+  display:block;
+  color:var(--muted);
+  font-size:12px;
+  margin-top:3px;
+}
+
+
+/* ================= STARS ================= */
+
 .stars{
   color:#ffd34d;
   letter-spacing:2px;
-  margin-bottom:15px;
+  margin:12px 0 15px;
 }
 
-/* REVIEW TEXT */
+
+/* ================= REVIEW TEXT ================= */
+
 .review-card p{
   color:#c4cad2;
   font-size:14px;
@@ -534,21 +553,8 @@ a{
   line-height:1.6;
 }
 
-/* CLIENT NAME */
-.review-card strong{
-  display:block;
-  margin-top:18px;
-  font-size:15px;
-}
 
-/* SERVICE */
-.review-card small{
-  color:var(--muted);
-  font-size:12px;
-}
-
-
-/* ================= TABLET ================= */
+/* ================= TABLET REVIEWS ================= */
 
 @media(max-width:900px){
 
@@ -576,14 +582,10 @@ a{
     min-height:auto;
   }
 
-  .review-image{
+  .review-client img{
     width:45px;
     height:45px;
-  }
-
-  .review-image img{
-    width:45px;
-    height:45px;
+    min-width:45px;
   }
 
 }
@@ -662,6 +664,8 @@ a{
   flex-wrap:wrap;
 }
 
+/* EMAIL / WHATSAPP / CALL */
+
 .contact-btn{
   padding:13px 18px;
   border:1px solid var(--line);
@@ -669,6 +673,7 @@ a{
   background:#0d1117;
   font-weight:700;
   transition:.2s;
+  white-space:nowrap;
 }
 
 .contact-btn:hover{
@@ -677,7 +682,7 @@ a{
 }
 
 
-/* ================= SOCIAL ================= */
+/* ================= SOCIAL MEDIA ================= */
 
 .social-grid{
   display:grid;
@@ -835,10 +840,21 @@ footer{
     font-size:40px;
   }
 
+  /* EMAIL / WHATSAPP / CALL */
   .contact-box{
     padding:35px;
     flex-direction:column;
     align-items:flex-start;
+  }
+
+  .contact-actions{
+    width:100%;
+  }
+
+  .contact-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
   }
 
   .mini-stats{
@@ -881,18 +897,23 @@ footer{
     padding:25px;
   }
 
+  /* SOCIAL MEDIA WILL STAY VISIBLE */
+  .social-grid{
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+
+  .social-grid>a,
+  .location-card{
+    width:100%;
+  }
+
   .footer-inner{
     flex-direction:column;
   }
 
   .socials{
     flex-wrap:wrap;
-  }
-
-}
-
-  .review-category-title h3{
-    font-size:20px;
   }
 
 }
