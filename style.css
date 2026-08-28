@@ -529,14 +529,14 @@ a{
 .stars{
   color:#ffd34d;
   letter-spacing:2px;
-  margin-bottom:15px;
+  margin-bottom:10px;
 }
 
 /* REVIEW TEXT */
 .review-card p{
   color:#c4cad2;
-  font-size:14px;
-  min-height:92px;
+  font-size:10px;
+  min-height:50px;
   line-height:1.6;
 }
 
@@ -556,7 +556,7 @@ a{
 
 /* ================= MOBILE REVIEWS ================= */
 
-@media(max-width:800px){
+@media(max-width:500px){
 
   .review-grid{
     grid-template-columns:1fr;
